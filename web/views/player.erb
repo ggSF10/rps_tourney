@@ -1,0 +1,22 @@
+
+
+<div class="welcome"> 
+	<h1>Rock, Paper, Scissors </h1>
+	<p>Welcome <%= @player.name %>, to the rock, paper, scissors online tournament! </p>
+</div>
+
+<p>Click below to see your current tournaments</p>
+<form action="/tournaments">
+    <input type="submit" value="Tournaments">
+</form>
+
+<p>Click below to see your current games</p>
+<form action="/games">
+    <input type="submit" value="Games">
+</form>
+
+<form action="/logout" method="post">
+		<input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Logout">
+</form>
+

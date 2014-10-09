@@ -1,0 +1,35 @@
+<div class="players">
+<h1>Current Players in the Tournament</h1>
+<% if @players %> 
+		<table>
+		<tr>
+			<td>
+  		<% @players.each do |player| %>
+    		<%= player.name %>
+    	</td>
+		</tr>
+  		<% end %>
+		</table>
+<% end %>
+</div>
+
+<div class="players">
+	<h3>Add a new player</h3>
+	<form action="/tournament/setup" method="post">
+	<div>
+		<label for="players">Player Name:</label>
+		<input id="players" type="text" name="player_name">
+  </div>
+	<input type="submit" value="Submit">
+	</form>
+
+<form action="/game">
+    <input type="submit" value="Begin New Tournament">
+</form>
+</div>
+
+<form action="/">
+    <input type="submit" value="Back">
+</form>
+</div>
+

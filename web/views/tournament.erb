@@ -1,0 +1,35 @@
+
+<div class="tournaments">
+<h2>Current Tournaments</h2>
+<% if @tournaments %> 
+		<ul>
+  		<% @tournaments.each do |tournament| %>
+    		<li> <%= tournament.name %> </li>
+  		<% end %>
+		</ul>
+<% end %>
+</div>
+
+<div class="tournaments">
+	<h3>Create a new tournament</h3>
+	<form action="/tournaments" method="post">
+	<div>
+		<label for="tournament">Tournament Name:</label>
+		<input id="tournament" type="text" name="tournament_name">
+  </div>
+	<input type="submit" value="Submit">
+	</form>
+
+	<h3>Join a Tournament</h3>
+	<form action="/tournament/search" method="get">
+	<div>
+		<label for="tournament">Tournament Name:</label>
+		<input id="tournament" type="text" name="search_name">
+  </div>
+	<input type="submit" value="Submit">
+	</form>
+
+<form action="/">
+    <input type="submit" value="Back">
+</form>
+</div>

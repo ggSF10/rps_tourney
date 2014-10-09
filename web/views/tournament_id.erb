@@ -1,0 +1,24 @@
+<h1>Current Players</h1>
+<% if @players %> 
+		<ul>
+  		<% @players.each do |player| %>
+    		<li> <%= player.name %> </li>
+  		<% end %>
+		</ul>
+<% end %>
+</div>
+
+<div class="game">
+	<h3>Start Game</h3>
+	<form action="/players" method="post">
+	<div>
+		<label for="players">Start Game:</label>
+		<input id="players" type="text" name="game_name">
+  </div>
+	<input type="submit" value="Submit">
+	</form>
+
+<form action="/">
+    <input type="submit" value="Back">
+</form>
+</div>
